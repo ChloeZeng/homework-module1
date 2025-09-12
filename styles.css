@@ -72,6 +72,10 @@
         color: #fff;
     }
     /* Main */
+    main h1 {
+                color: #9ed034;
+                font: Arial, Helvetica, sans-serif;
+            }
     main h2 {
                 color: #9ed034;
                 font: Arial, Helvetica, sans-serif;
@@ -187,4 +191,76 @@
     td:first-child {
         font-weight: bold;
         background: #bde1ff;
+    }
+
+    /* Contact */
+    form fieldset {
+        border: 1px solid #9ed034;
+        margin: 20px 0;
+        padding: 20px;
+        background: #fff;
+    }
+
+    form legend {
+        color: #4977D1;
+        font-size: 1em;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0 10px;
+    }
+    
+    form label {
+        display: block;
+        margin: 10px 0 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form select,
+    form textarea {
+        width: 100%;
+        max-width: 400px;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        font-size: 0.9em;
+    }
+    form textarea {
+        height: 100px;
+        resize: vertical;
+    }
+    
+    form .radios label {
+        display: inline;
+        margin-right: 10px;
+    }
+
+    .contactinfo span:first-child {
+        font-weight: bold;
+        margin-right: 5px;
+    }
+
+    /* button */
+    form .button {
+        width: 100%; 
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+    form .button {
+        display: flex;
+        justify-content: flex-end;
+    }
+    form .button input[type="submit"] {
+        background-color: #4977D1;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    form .button input[type="submit"]:hover {
+        background-color: #9ed034;
     }
