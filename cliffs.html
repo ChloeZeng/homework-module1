@@ -1,24 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-  <title>Great Cliff</title>
+  <title>Great Cliffs of California</title>
   <meta charset="utf-8">
+   <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<body>
+    
+</head>
+
+<body id="cliffs">
 <div id="container">
 
     <!--Header-->
     <header>
-        <img src="images/cliff_ocean.jpg" alt="OceanView Cliff" width="1280" height="564">
         <div class="main-header">
             <div clss="logo">
                 <img src="images/logo.png" alt="Great Cliff's Logo" width="125">
                 <!--h3>Great Cliff's Logo</h3-->
             </div>
+               <!--Navgation-->
             <nav class="main-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="cliffs.html">Cliffs</a></li>
+                    <li class="active"><a href="cliffs.html">Cliffs</a></li>
                     <li><a href="activities.html">Activities</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -30,51 +35,64 @@
 
      <!--Main Content-->
     <main>
-        <h2>Explore the Great Cliffs</h2>
-      <p>The Great Cliffs of California are famous for their dramatic ocean views, unique rock formations, and rich history. Visitors come from all over the world to hike, climb, and admire these natural wonders.</p>
+        <h2>California's Greatest Cliffs</h2>
+      <p>The greatest cliffs are these four cliffs located in southern California. Each of these cliffs have their own uniqueness and beauty: West Cliff, North Cliff, East Cliff and South Cliff are the pride of California. Each cliff has many amenities to offer visitors such as recreational areas, camping sites, wildlife watch spots and overnight cabins.</p>
 
-      <h3>Highlights of Great Cliffs</h3>
-      <ul>
-        <li>Unique rock formations shaped by centuries of erosion</li>
-        <li>Popular hiking trails with breathtaking views</li>
-        <li>Perfect spots for sunrise and sunset photography</li>
-        <li>Wildlife habitats including seabirds and dolphins</li>
-      </ul>
+      <p>No matter which direction you head from Irvine, California, the sites are easily reached within a 100 mile radius. West Cliff is the most popular among Westcliff University campus students because of its close proximity.</p>
+      
       <h3>Cliffs Information</h3>
 
-        <table border="1" cellpadding="8">
-        <tr>
-          <th>Cliff Name</th>
-          <th>Height</th>
-          <th>Location</th>
-          <th>Special Feature</th>
-        </tr>
-        <tr>
-          <td>Sunset Cliff</td>
-          <td>300 ft</td>
-          <td>North Coast</td>
-          <td>Best sunset views</td>
-        </tr>
-        <tr>
-          <td>Eagle Cliff</td>
-          <td>450 ft</td>
-          <td>East Bay</td>
-          <td>Rock climbing hotspot</td>
-        </tr>
-        <tr>
-          <td>Whispering Cliff</td>
-          <td>200 ft</td>
-          <td>South Shore</td>
-          <td>Echoes with ocean waves</td>
-        </tr>
-      </table>
+      <!--Cliff Gallery-->
+      <div class="cliff-gallery">
 
-      <img src="images/CA_SouthCliff.jpg" alt="Sunset Cliff" width="400" height="200">
-      <img src="images/CA_WestCliff.jpg" alt="Eagle Cliff" width="400" height="200">
+        <div class="cliff-card">
+          <img src="images/cliff-west-sea.jpg" alt="West Cliff">
+          <div class="cliff-caption">West Cliff</div>
+        </div>
+
+        <div class="cliff-card">
+          <img src="images/cliff-north-mountain.jpg" alt="North Cliff">
+          <div class="cliff-caption">North Cliff</div>
+        </div>
+
+        <div class="cliff-card">
+          <img src="images/cliff-east-river.jpg" alt="East Cliff">
+          <div class="cliff-caption">East Cliff</div>
+        </div>
+
+        <div class="cliff-card">
+          <img src="images/cliff-south-canyon.jpg" alt="South Cliff">
+          <div class="cliff-caption">South Cliff</div>
+        </div>
+
+      </div>
+
+      
     </main>
 
 
-     <!--Footer-->
+    <!--Partners-->
+    <section>
+       <h2>Partners</h2>
+        <ul id="partners">
+            <li class="partner">
+                <img src="images/partners/partner-bustour.png" alt="Partner But Tours"></li>
+            <li class="partner">
+                <img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental"></li>
+            <li class="partner">
+                <img src="images/partners/partner-campingadv.png" alt="Partner Campling Adventure"></li>
+            <li class="partner">
+                <img src="images/partners/partner-collegetours.png" alt="Partner College Tours"></li>
+            <li class="partner">
+                <img src="images/partners/partner-rentalbike.png" alt="Partner Bike Rentals"></li>
+            <li class="partner">
+                <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group"></li>
+
+        </ul>
+    </section>
+
+
+<!-Footer-->
      <footer>
      <div id="nondisclaimer">
         <div class="copy">
@@ -82,20 +100,14 @@
         </div>
         <div class="social">
             <h5>Follow Great Cliff on Social Media</h5>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="images/facebook.png" alt="Facebook" width="30">
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="images/instagram.png" alt="Instagram" width="30">
-            </a>
-             <a href="https://x.com/" target="_blank">
-                <img src="images/x.jpg" alt="x" width="30">
-            </a>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
         </div>
      </div>
      
      <div id="disclaimer">
-        <p style="font-size: 12px;">This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
+        <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
      </div>
      </footer>
 </div>

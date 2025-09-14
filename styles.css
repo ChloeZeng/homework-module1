@@ -9,6 +9,11 @@
       background-size: 1500px;
       height: 300px;
     }
+    #cliffs header {
+      background: no-repeat lightgrey url(images/forest_cliff.jpg);
+      background-size: 1500px;
+      height: 300px;
+    }
     #activities header {
       background: no-repeat lightgrey url(images/runfly.jpg);
       background-size: 1500px;
@@ -81,9 +86,11 @@
                 font: Arial, Helvetica, sans-serif;
             }
     /* Partners */
+
     section {
         width: 100%;
         background-color: #4288c3;
+        color: #fff;
     }
     section #partners {
         width: 1200px;
@@ -264,3 +271,34 @@
     form .button input[type="submit"]:hover {
         background-color: #9ed034;
     }
+
+    /*Cliff Gallery*/
+    .cliff-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 两列 */
+  gap: 20px; /* 卡片之间的间距 */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cliff-card {
+  position: relative;
+  border: 1px solid #ccc;
+}
+
+.cliff-card img {
+  width: 100%;
+  display: block;
+}
+
+.cliff-caption {
+  background-color: #852b1b; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 0;
+}
