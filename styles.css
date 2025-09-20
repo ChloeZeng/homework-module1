@@ -307,7 +307,7 @@
 #timeofday {
     font-family: Arial, Helvetica, sans-serif;
     color: #3a3a3a;
-    background: linear-gradient(0deg, rgba(251,215,139,1) 0%, rgba(118,213,245,1) 100%);
+    background: linear-gradient(0deg, rgb(186, 251, 139) 0%, rgb(44, 95, 112) 100%);
     text-align: center;
     padding: 10px 20px;
     font-size: 18px;
@@ -319,5 +319,5 @@
 }
 
 #timeofday span {
-    color: #125688;
+    color: #fff;
 }
