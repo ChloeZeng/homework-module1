@@ -69,6 +69,7 @@
 
         </ul>
     </section>
+    <script src="partners.js"></script>
 
      <!--Footer-->
      <footer>
@@ -151,38 +152,6 @@
     setInterval(currentTime, 1000); // setting timer
     //Initial run of time data function
     currentTime();
-
-var fileNames = [
-    "partner-bustour.png",
-    "partner-cabinrental.png",
-    "partner-campingadv.png",
-    "partner-collegetours.png",
-    "partner-rentalbike.png",
-    "partner-tourgroup.png"
-  ];
-  
-  var captions = [
-    "Bus Tour",
-    "Cabin Rental",
-    "Camping Adventure",
-    "College Tours",
-    "Rental Bike",
-    "Tour Group"
-  ];
-
-  var imageList = []; 
-  var openList = "<li class='partner'>";
-  var closeList = "</li>";
-
-  for (var i = 0; i < fileNames.length; i++) {
-    var image = openList + 
-      "<img src='images/partners/" + fileNames[i] + "' alt='" + captions[i] + "'>" + 
-      closeList;
-    imageList.push(image);
-  }
-
-  document.getElementById("partners").innerHTML = imageList.join("");
-
         
 </script>
 
