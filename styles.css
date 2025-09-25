@@ -263,16 +263,16 @@
         justify-content: flex-end;
     }
     form .button input[type="submit"] {
-        background-color: #4977D1;
+        /* background-color: #4977D1; */
         color: #fff;
         border: none;
         padding: 10px 20px;
         font-size: 1em;
         cursor: pointer;
     }
-    form .button input[type="submit"]:hover {
+    /* form .button input[type="submit"]:hover {
         background-color: #9ed034;
-    }
+    }  */
 
     /*Cliff Gallery*/
     .cliff-gallery {
