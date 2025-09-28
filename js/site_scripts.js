@@ -28,5 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
   imageList.push(image);
 }
 
-  document.getElementById("partners").innerHTML = imageList.join("");
+  /*document.getElementById("partners").innerHTML = imageList.join("");*/
+  document.getElementById("partners").innerHTML = imageList;
 });
