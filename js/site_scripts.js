@@ -31,3 +31,4 @@ document.addEventListener("DOMContentLoaded", function () {
   /*document.getElementById("partners").innerHTML = imageList.join("");*/
   document.getElementById("partners").innerHTML = imageList;
 });
+
