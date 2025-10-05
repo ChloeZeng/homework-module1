@@ -201,6 +201,11 @@
         font-weight: bold;
         background: #bde1ff;
     }
+    td.selected {
+        background-color: #9ed034 !important;
+        color: white;
+        font-weight: bold;
+    }
 
     /* Contact */
     form fieldset {
