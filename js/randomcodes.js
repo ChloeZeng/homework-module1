@@ -1,52 +1,66 @@
-/* -----RANDOM CODES -----*/
-let currentCode = '';
-//Function to generate combination of characters
-function generateCode() {
-    //Create variables to store generated codes and the type of characters we want to show as codes
-    var code = ' ';//initialize to null value
-    var getCode = ' '; //to store entered code
-    var btnvalue; //for button boolean value
-    var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$';
+/* ----- RANDOM CODES ----- */
+let currentCode = ''; // store the generated code globally
 
-    //Generate character multiple times using a loop
-    for (var i = 0; i < 8; i++) {
-        var char = Math.floor(Math.random() * str.length); //random select a character from the variable and then store in a new variable
-        code += str.charAt(char);  // accumulate the generated character into a string of 8 characters
-    }
-    return code; //return the final accumulated string when loop ends
+// Function to generate combination of characters
+function generateCode() {
+  var code = ''; // initialize empty
+  var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$';
+
+  // Generate character multiple times using a loop
+  for (var i = 0; i < 8; i++) {
+    var char = Math.floor(Math.random() * str.length);
+    code += str.charAt(char);
+  }
+
+  currentCode = code; // store globally
+  return code;
 }
 
-//GET HTML element to display
+// Display generated code on page load
 document.getElementById("codes").innerHTML = generateCode();
 
-//Disable Button
+// Disable Button
 function disableButton(btnvalue) {
-    document.getElementById("submit").disabled = btnvalue; //able/disable button
-    if (btnvalue == true) { //test if button is disabled or enabled
-        //set button and label color translucent
-        document.getElementById("submit").style.backgroundColor = "rgba(73, 119, 209, 0.3)";
-        document.getElementById("submit").style.color = "rgba(255, 255, 255, 0.5)";
+  const btn = document.getElementById("submit");
+  btn.disabled = btnvalue;
 
-    } else {
-        //set button and label color with no transparency
-        document.getElementById("submit").style.backgroundColor = "rgba(73, 119, 209, 1)";
-        document.getElementById("submit").style.backgroundColor = "rgba(255, 255, 255,1)";
-    }
-} 
-//listen to user input code
-var codebox = document.getElementById("codeentered"); //get textbox
-codebox.addEventListener("input", evaluateCode);//listen to code entered in textbox
-
-//run function if detected user had entered a character in textbox
-function evaluateCode() {
-    getCode = document.getElementById("codeentered").value;//get character entered
-    var charset1 = getCode.trim(); //remove any hidden characters entered
-    var charset2 = code.trim(); //remove any hidden characters generated
-    //test if code entered matches the number of generated characters
-    if (charset1.length == charset2.length && charset1 == charset2) {
-        disableButton(false);//if match, run the function to enable button
-    }
+  if (btnvalue === true) {
+    // translucent style
+    btn.style.backgroundColor = "rgba(73, 119, 209, 0.3)";
+    btn.style.color = "rgba(255, 255, 255, 0.5)";
+  } else {
+    // active style
+    btn.style.backgroundColor = "rgba(73, 119, 209, 1)";
+    btn.style.color = "#fff";
+  }
 }
 
-//Active function
+// Listen to user input in code box
+var codebox = document.getElementById("randomcodeInput");
+if (codebox) {
+  codebox.addEventListener("input", evaluateCode);
+}
+
+// Run function if user entered characters
+function evaluateCode() {
+  var getCode = document.getElementById("randomcodeInput").value.trim();
+  var charset1 = getCode;
+  var charset2 = currentCode.trim();
+
+  // test if code entered matches the generated one
+  if (charset1.length === charset2.length && charset1 === charset2) {
+    disableButton(false); // enable button
+  } else {
+    disableButton(true); // disable if not match
+  }
+}
+
+// Optional: refresh code function (keep same naming as before)
+function refreshCode() {
+  document.getElementById("codes").innerHTML = generateCode();
+  document.getElementById("randomcodeInput").value = "";
+  disableButton(true);
+}
+
+// Initialize button state
 disableButton(true);

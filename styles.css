@@ -18,6 +18,9 @@
       width: 100%;
       min-width: 275px;
     }
+    body {
+      padding-top: 100px; /
+    }
     /* Each Page Header Background */
     #home header {
       width: 100%;
@@ -97,6 +100,26 @@
         border-left: px solid rgba(202, 204, 202, 0.6);
         color: #fff;
     }
+    /* ==== Mobile Nav ====*/
+    .navbar-custom {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    }
+
+    .navbar-collapse {
+    justify-content: flex-end;  /* 导航靠右 */
+    text-align: right;
+    }
+
+    .navbar-nav .nav-link {
+    padding: 10px 20px;
+    color: #fff;
+    }
+
+    .navbar-toggler {
+    border-color: #fff;
+    }
+
 
     /* Main content*/
     main h1, main h2 {
@@ -475,3 +498,4 @@
     font-weight: bold;
     font-size: 18px;
 }
+
