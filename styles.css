@@ -1,112 +1,51 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #333;
+        background-color: #fff;
+        }
+        img {
+        max-width: 100%;
+        height: auto;
+        }
+    
     /* Header */
     header {
       width: 100%;
-      min-width: 400px;
-      padding-top: 3em;
+      min-width: 275px;
     }
+    /* Each Page Header Background */
     #home header {
-      background: no-repeat center center lightgrey url(images/cliff_ocean.jpg);
+      width: 100%;
+      background: no-repeat center center white url(images/cliff_ocean.jpg);
       background-size: cover;
-      background-position: center;
+      position: relative;
       
     }
     #cliffs header {
-      background: no-repeat lightgrey url(images/forest_cliff.jpg);
-      background-size: 1500px;
-      height: 300px;
+      width: 100%;
+      background: no-repeat center center white url(images/forest_cliff.jpg);
+      background-size: cover;
+      position: relative;
     }
     #activities header {
-      background: no-repeat lightgrey url(images/runfly.jpg);
-      background-size: 1500px;
-      height: 300px;
-    }
-
-    /* ===== Activities Page Header ===== */
-    #activities header {
-    background: no-repeat lightgrey url(images/runfly.jpg);
-    background-size: 1500px;
-    height: 300px;
-    }
-
-    /* ===== Display Selected Box ===== */
-    #activities main #displaySelected {
-    visibility: hidden;          
-    margin: 2em auto;
-    width: 600px;
-    border: 1px solid #9ed034;
-    background-color: #fff;
-    padding: 1em 1.5em;
-    border-radius: 6px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    /* ===== Title (My selected activities to enquire:) ===== */
-    #activities main #displaySelected h4 {
-    font-weight: bold;
-    font-size: 1.15em;
-    color: #000;
-    margin-bottom: 1em;
-    }
-
-    /* ===== Activity Results List ===== */
-    #activities main #result {
-    min-height: 50px;
-    width: 100%;
-    padding: 0;
-    text-align: left;
-    margin-bottom: 1em;
-    }
-
-    #activities main #result p {
-    margin: 0.4em 0;
-    line-height: 1.4;
-    }
-
-    /* ===== Highlighted Cliff Name Badge ===== */
-    #activities main #displaySelected .cliffName {
-    background: #d7e6ff;
-    padding: 2px 6px;
-    border-radius: 4px;
-    margin-left: 5px;
-    color: #333;
-    font-weight: normal;
-    }
-
-    /* ===== Email Input + Button Layout ===== */
-    #activities main #displaySelected #sendinfo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    }
-
-    #activities main #displaySelected #sendinfo input[type="email"] {
-    width: 220px;
-    padding: 6px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    }
-
-    #activities main #displaySelected #sendinfo button {
-    background-color: #eeeeee;
-    color: black;
-    border: 1px solid #999;
-    padding: 7px 12px;
-    border-radius: 3px;
-    cursor: pointer;
-    }
-
-    #activities main #displaySelected #sendinfo button:hover {
-    background-color: #9ed034;
+      width: 100%;
+      background: no-repeat center center white url(images/runfly.jpg);
+      background-size: cover;
+      position: relative;
     }
     #contact header {
-        background: no-repeat lightgrey url(images/cliff_rock.jpg);
-        background-size: 1500px;
-        height: 300px;
+      width: 100%;
+      background: no-repeat center center white url(images/cliff_rock.jpg);
+      background-size: cover;
+      position: relative;
     }
     .main-header {
-      background-color: rgb(255, 255, 255, 0.8);
+      background-color: rgb(38, 41, 61, 0.7);
       max-width: 1500px;
       width: 100%;
       margin: 0 auto;
@@ -130,7 +69,7 @@
     display: flex;
     margin: 0;
     padding: 0;
-}
+    }
     .main-menu ul li {
         list-style-type: none;
         /*display: inline-block;*/
@@ -158,16 +97,14 @@
         border-left: px solid rgba(202, 204, 202, 0.6);
         color: #fff;
     }
-    /* Main */
-    main h1 {
+
+    /* Main content*/
+    main h1, main h2 {
                 color: #9ed034;
                 font: Arial, Helvetica, sans-serif;
             }
-    main h2 {
-                color: #9ed034;
-                font: Arial, Helvetica, sans-serif;
-            }
-    /* Partners */
+
+    /* Section Partners */
 
     section {
         width: 100%;
@@ -191,7 +128,36 @@
         width: 90px;
         height: 90px;
     }
-    /* Footer */
+
+/* Responsive partner layout (new version) */
+#partners {
+  display: flex;                
+  justify-content: center;     
+  flex-wrap: wrap;          
+  gap: 10px;                   
+  list-style: none;            
+  padding: 2em 0;
+  /*margin: 0;*/
+}
+
+#partners .partner {
+  background-color: #fff;
+  border-radius: 50%;          
+  width: 100px;                
+  height: 100px;              
+  /*flex: 0 0 auto;*/              
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#partners img {
+  max-width: 100%;              
+  max-height: 100%;
+  object-fit: contain;  
+}
+
+/* Footer */
     footer {
     width: 100%;
     padding: 2em 0 1em;
@@ -204,14 +170,14 @@
     padding: 0 3.5em;
     }
     footer #nondisclaimer .copy {
-        padding: 3.5em 3.5em 9em;
-        float: left;
+        /*padding: 3.5em 3.5em 9em;*/
+        /*float: left;*/
         font-size: 0.9em;
     }
     footer #nondisclaimer .social {
         padding: 2.5em;
-        margin-right: 9.25em;
-        float: right;
+        /*margin-right: 9.25em;
+        float: right;*/
     }
     footer #disclaimer {
         clear: both;
@@ -220,7 +186,7 @@
         font-size: 0.85em;
         text-align: center;
     }
-    footer #nondisclaimer .social .fa {
+    footer .fa {
         padding: 15px;
         font-size: 15px;
         width: 15px;
@@ -229,70 +195,182 @@
         margin: 0 4px;
         border-radius: 50%;
     }
-    footer #nondisclaimer .social .fa:hover {
+    footer .fa:hover {
         opacity: 0.7;
     }
-    footer #nondisclaimer .social .fa-facebook {
-        background: #3b5998;
-        color: white;
+    footer .fa-facebook { background: #3b5998; color: white; }
+    footer .fa-twitter { background: #55acee; color: white; }
+    footer .fa-instagram { background: #125688; color: white; } 
+
+/*Cliff Gallery*/
+.cliff-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 两列 */
+  gap: 20px; /* 卡片之间的间距 */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cliff-card {
+  position: relative;
+  border: 1px solid #ccc;
+}
+
+.cliff-card img {
+  width: 100%;
+  display: block;
+}
+
+.cliff-caption {
+  background-color: #852b1b; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 0;
+}
+
+/* ========== Activities Page ========== */
+#activities header {
+  background: no-repeat center center white url(images/runfly.jpg);
+  background-size: 100% 400px;
+  position: relative;
+}
+
+/* Table structure */
+.activities-table {
+  width: 1000px;
+  margin: 4em auto 0;
+  border-collapse: collapse;
+}
+
+/* Title row (red background) */
+.activities-table thead tr:first-child th.table-caption {
+  background: #852b1b;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: bold;
+  height: 40px;
+  padding-top: 1em;
+  text-align: center;
+  border: 1px solid #852b1b;
+  border-bottom: none;
+}
+
+/* Second header row */
+.activities-table thead tr:nth-child(2) th:first-child {
+  width: 125px;
+  height: 50px;
+  background: #4977d1;
+  color: #fff;
+}
+
+/* Table header row background */
+.activities-table thead {
+  background: #bde1ff;
+}
+
+/* Table body */
+.activities-table tbody {
+  background: #eeffe6;
+  text-align: center;
+}
+
+/* Cell defaults */
+.activities-table th,
+.activities-table td {
+  width: 225px;
+  height: 75px;
+  vertical-align: middle;
+  border: 1px solid #852b1b;
+}
+
+/* Activity column (first column) */
+.activities-table tbody td:first-child {
+  font-weight: bold;
+  background: #bde1ff;
+}
+
+/* Selected highlight */
+.activities-table td.selected,
+.activities-table .tdhighlight {
+  background-color: #9ed034 !important;
+  color: white;
+  font-weight: bold;
+}
+
+/* ===== Display Selected Box ===== */
+#activities main #displaySelected {
+    visibility: hidden;          
+    margin: 2em auto;
+    width: 600px;
+    border: 1px solid #9ed034;
+    background-color: #fff;
+    padding: 1em 1.5em;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
-    footer #nondisclaimer .social .fa-twitter {
-        background: #55acee;
-        color: white;
+/* ===== Title (My selected activities to enquire:) ===== */
+#activities main #displaySelected h4 {
+    font-weight: bold;
+    font-size: 1.15em;
+    color: #000;
+    margin-bottom: 1em;
     }
-    footer #nondisclaimer .social .fa-instagram {
-        background: #125688;
-        color: white;
+/* ===== Activity Results List ===== */
+#activities main #result {
+    min-height: 50px;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 1em;
     }
 
-    /* Activities */
-    table {
-        width: 1000px;
-        margin: 4em auto 0 auto;
-    }
-    caption {
-        background: #852b1b;
-        height: 40px;
-        color: #fff;
-        font-size: 1.3em;
-        font-weight: bold;
-        padding-top: 1em;
-    }
-    thead {
-        background: #bde1ff;
-    }
-    tbody {
-        background: #eeffe6;
-        text-align: center;
-    }
-    th,td {
-        width: 225px;
-        height: 75px;
-        vertical-align: middle;
-        border: solid 1px #852b1b;
-    }
-    th:first-child {
-        width: 125px;
-        height: 50px;
-        background: #4977d1;
-        color: #fff;
-    }
-    td:first-child {
-        font-weight: bold;
-        background: #bde1ff;
-    }
-    td.selected {
-        background-color: #9ed034 !important;
-        color: white;
-        font-weight: bold;
-    }
-    .tdhighlight {
-        background-color: #9ed034;
-        color: white;
-        font-weight: bold;
+#activities main #result p {
+    margin: 0.4em 0;
+    line-height: 1.4;
     }
 
-    /* Contact */
+/* ===== Email Input + Button Layout ===== */
+#activities main #displaySelected #sendinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    }
+#activities main #displaySelected #sendinfo input[type="email"] {
+    width: 220px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    }
+#activities main #displaySelected #sendinfo button {
+    background-color: #eeeeee;
+    color: black;
+    border: 1px solid #999;
+    padding: 7px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    }
+#activities main #displaySelected #sendinfo button:hover {
+    background-color: #9ed034;
+    }
+    /* ===== Highlighted Cliff Name Badge ===== */
+   /* #activities main #displaySelected .cliffName {
+    background: #d7e6ff;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 5px;
+    color: #333;
+    font-weight: normal;
+    } */
+
+
+/* Contact  Form*/
     form fieldset {
         border: 1px solid #9ed034;
         margin: 20px 0;
@@ -332,7 +410,7 @@
         resize: vertical;
     }
     
-    form .radios label {
+    /*form .radios label {
         display: inline;
         margin-right: 10px;
     }
@@ -340,18 +418,19 @@
     .contactinfo span:first-child {
         font-weight: bold;
         margin-right: 5px;
-    }
+    }*/
 
     /* button */
     form .button {
-        width: 100%; 
-        max-width: 400px;
-        box-sizing: border-box;
-    }
-    form .button {
         display: flex;
         justify-content: flex-end;
+        max-width: 400px;
     }
+    /*form .button {
+        width: 100%; 
+        box-sizing: border-box;
+    }*/
+
     form .button input[type="submit"] {
         /* background-color: #4977D1; */
         color: #fff;
@@ -364,36 +443,7 @@
         background-color: #9ed034;
     }  */
 
-    /*Cliff Gallery*/
-    .cliff-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 两列 */
-  gap: 20px; /* 卡片之间的间距 */
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.cliff-card {
-  position: relative;
-  border: 1px solid #ccc;
-}
-
-.cliff-card img {
-  width: 100%;
-  display: block;
-}
-
-.cliff-caption {
-  background-color: #852b1b; 
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  padding: 8px 0;
-}
+/* ===== Extra Elements ===== */
 #timeofday {
     font-family: Arial, Helvetica, sans-serif;
     color: #3a3a3a;
@@ -411,38 +461,12 @@
 #timeofday span {
     color: #125688;
 }
-#partners {
-  display: flex;                
-  justify-content: center;     
-  flex-wrap: nowrap;          
-  gap: 10px;                   
-  list-style: none;            
-  padding: 2em 0;
-  margin: 0;
-}
 
-#partners .partner {
-  background-color: #fff;
-  border-radius: 50%;          
-  width: 100px;                
-  height: 100px;              
-  flex: 0 0 auto;              
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#partners img {
-  max-width: 100%;              
-  max-height: 100%;
-  object-fit: contain;
-  
-}
-
+/* Verification code */
 .randomcode {
     display: flex;
     align-items: center;
-    gap: 10px; /* 输入框和验证码之间留点距离 */
+    gap: 10px; 
 }
 
 #codes {
