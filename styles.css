@@ -1,4 +1,14 @@
-    * {
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+   * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -23,49 +33,64 @@
         top: 0;
         z-index: 1000;
     }
-    body {
-      padding-top: 100px; /
-    }
-    /* Each Page Header Background */
-    #home header {
-      width: 100%;
-      background: no-repeat center center white url(images/cliff_ocean.jpg);
-      background-size: cover;
-      position: relative;
-      
-    }
-    #cliffs header {
-      width: 100%;
-      background: no-repeat center center white url(images/forest_cliff.jpg);
-      background-size: cover;
-      position: relative;
-    }
-    #activities header {
-      width: 100%;
-      background: no-repeat center center white url(images/runfly.jpg);
-      background-size: cover;
-      position: relative;
-    }
-    #contact header {
-      width: 100%;
-      background: no-repeat center center white url(images/cliff_rock.jpg);
-      background-size: cover;
-      position: relative;
-    }
-    .main-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: rgba(38, 41, 61, 0.7);
-        height: 100px;
-        padding: 0 2em;
-        margin: 0 auto;
-        max-width: 1500px;
-    }
-    .logo img {
+
+   /* === Each Page Header Background === */
+#home header,
+#cliffs header,
+#activities header,
+#contact header {
+  width: 100%;
+  height: 300px;              /* ✅ 控制封面图高度 */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  margin-top: 0;
+  padding-top: 0;
+  z-index: 1;
+}
+#home header {
+  background-image: url(images/cliff_ocean.jpg);
+}
+#cliffs header {
+  background-image: url(images/forest_cliff.jpg);
+}
+#activities header {
+  background-image: url(images/runfly.jpg);
+}
+#contact header {
+  background-image: url(images/cliff_rock.jpg);
+}
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(38, 41, 61, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2em;
+  z-index: 1000;
+}
+.main-header .logo {
+  flex-shrink: 0; /* ✅ 保证 logo 不被压缩 */
+}
+.main-header .logo img {
+  display: block;
+  height: auto;
+}
+.main-header nav {
+  margin-left: auto; /* ✅ 强制导航靠右 */
+}
+main {
+  margin-top: 400px;         
+}
+   /* .logo img {
         width: 100px;
         height: auto;
-    }
+    }*/
 
     /* Navigation */
     .main-menu {
@@ -237,50 +262,56 @@ main h1, main h2 {
   }
 }
 
-/* Footer */
-    footer {
-    width: 100%;
-    padding: 2em 0 1em;
-    background-color: #ecfab8;
-    }
-    footer #nondisclaimer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 3.5em;
-    }
-    footer #nondisclaimer .copy {
-        /*padding: 3.5em 3.5em 9em;*/
-        /*float: left;*/
-        font-size: 0.9em;
-    }
-    footer #nondisclaimer .social {
-        padding: 2.5em;
-        /*margin-right: 9.25em;
-        float: right;*/
-    }
-    footer #disclaimer {
-        clear: both;
-    }
-    footer #disclaimer p {
-        font-size: 0.85em;
-        text-align: center;
-    }
-    footer .fa {
-        padding: 15px;
-        font-size: 15px;
-        width: 15px;
-        text-align: center;
-        text-decoration: none;
-        margin: 0 4px;
-        border-radius: 50%;
-    }
-    footer .fa:hover {
-        opacity: 0.7;
-    }
-    footer .fa-facebook { background: #3b5998; color: white; }
-    footer .fa-twitter { background: #55acee; color: white; }
-    footer .fa-instagram { background: #125688; color: white; } 
+/* ===== Footer ===== */
+.site-footer {
+  background-color: #ecfab8;   /* 淡绿底色 */
+  color: #333;
+  width: 100%;
+  padding: 2em 0 1.5em;
+  border-top: 3px solid #d9f29b;
+}
+
+.site-footer .footer-copy {
+  font-size: 0.95em;
+}
+
+.site-footer .footer-disclaimer {
+  font-size: 0.85em;
+  color: #333;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+/* ===== Social Icons ===== */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-social .fa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Color schemes */
+.footer-social .fa-facebook { background: #3b5998; }
+.footer-social .fa-instagram { background: #125688; }
+.footer-social .fa-twitter { background: #55acee; }
+
+/* Hover effect */
+.footer-social .fa:hover {
+  transform: translateY(-3px);
+  opacity: 0.85;
+}
+
 
 /*Cliff Gallery*/
 .cliff-gallery {
