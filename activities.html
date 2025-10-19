@@ -128,7 +128,7 @@
 
 
         <!-- Selected Activities Section -->
-        <div id="displaySelected" class="mt-5">
+        <!--<div id="displaySelected" class="mt-5">
           <div id="result">
             <h4>My selected activities to enquire:</h4>
           </div>
@@ -143,7 +143,7 @@
             />
             <button class="btn btn-success ml-md-2">Get Info</button>
           </div>
-        </div>
+        </div>-->
       </main>
 
       <!-- Partners -->
@@ -176,6 +176,30 @@
 </footer>
     </div>
 
+<!-- Modal -->
+<div class="modal fade" id="activityModal" tabindex="-1" role="dialog" aria-labelledby="activityModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="activityModalLabel">My selected activities to enquire:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body" id="modalActivityList">
+        <!-- ✅ 动态添加选中的活动 -->
+      </div>
+
+      <div class="modal-footer d-flex justify-content-between">
+        <button type="button" class="btn btn-success" id="backToActivities">Back to Activities</button>
+        <button type="button" class="btn btn-primary" id="getInfo">Get Info</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <!-- Bootstrap jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap Popper -->
@@ -190,5 +214,6 @@
       }
     </script>
     <script src="js/site_scripts.js" defer></script>
+    <script src="js/activity.js" defer></script>
   </body>
 </html>

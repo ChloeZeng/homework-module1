@@ -1,29 +1,53 @@
-// User interaction with table cells
 $(document).ready(function() {
-  $("td").click(function () { // when user clicks a table data cell
-    var content = $(this).text(); // get cell text
-    var colIndex = $(this).index(); // get column index of clicked cell
-    var cliffName = $("th").eq(colIndex).text(); // get corresponding Cliff name from header row
+  $("td").click(function () {
+    var content = $(this).text();
+    var colIndex = $(this).index();
+    var cliffName = $("th").eq(colIndex).text();
 
-    // Skip "Not Available" and first column (Activity titles)
+    // 忽略 "Not Available" 和活动列标题
     if (content === "Not Available" || colIndex === 0) {
       return;
     }
 
-    // Toggle highlight
     $(this).toggleClass("tdhighlight");
 
-    // Add or remove from result box
+    // 添加或移除活动
     if ($(this).hasClass("tdhighlight")) {
-      $("#displaySelected").css("visibility", "visible").css("margin-top", "2em");
-      $("#result").append("<p>" + content + " <span class='cliffName'>at " + cliffName + "</span></p>");
+      $("#modalActivityList").append("<p>" + content + " <span class='cliffName'>at " + cliffName + "</span></p>");
     } else {
-      $("#result p:contains('" + content + "')").remove();
-      // If no activities selected, hide the display box
-      if ($("#result").children().length === 0) {
-        $("#displaySelected").css("visibility", "hidden").css("margin-top", "0");
-      }
+      $("#modalActivityList p:contains('" + content + "')").remove();
     }
-  });
-});
 
+    // 如果 Modal 未打开，则打开一次
+    if (!$("#activityModal").hasClass("show")) {
+      $("#activityModal").modal("show");
+    }
+
+    // ✅ 更新 Modal 内容状态
+    updateModalState();
+  });
+
+  // 点击 Back to Activities
+  $("#backToActivities").click(function() {
+    $("#activityModal").modal("hide");
+  });
+
+  // 点击 Get Info
+  $("#getInfo").click(function() {
+    alert("Info request sent! (You can integrate email form here)");
+  });
+
+  // ✅ 定义更新 Modal 内容状态的函数
+  function updateModalState() {
+    const list = $("#modalActivityList");
+    const items = list.children("p").length;
+
+    if (items === 0) {
+      // 当无选中活动时显示默认提示
+      list.html("<p class='text-muted mb-0'></p>");
+    }
+  }
+
+  // ✅ 初始化 Modal 默认提示
+  updateModalState();
+});

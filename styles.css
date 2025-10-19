@@ -367,7 +367,7 @@ main h1, main h2 {
   height: 40px;
   padding-top: 1em;
   text-align: center;
-  border: 1px solid #852b1b;
+  border: 2px solid #852b1b;
   border-bottom: none;
 }
 
@@ -396,7 +396,7 @@ main h1, main h2 {
   width: 225px;
   height: 75px;
   vertical-align: middle;
-  border: 1px solid #852b1b;
+  border: 2px solid #852b1b;
 }
 
 /* Activity column (first column) */
@@ -445,6 +445,14 @@ main h1, main h2 {
     margin: 0.4em 0;
     line-height: 1.4;
     }
+  
+.modal-content {
+  border-radius: 8px;
+}
+
+.modal-body p {
+  margin: 0.5em 0;
+}
 
 /* ===== Email Input + Button Layout ===== */
 #activities main #displaySelected #sendinfo {
